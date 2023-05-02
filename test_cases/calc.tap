@@ -1,0 +1,45 @@
+
+main { 
+    zero=0;
+    b=0;
+    until b==zero {
+
+        write "operator codes for dseeferent operators";
+        write "exit calculator -> 0";
+        write "add -> 1";
+        write "subtract -> 2";
+        write "multiply -> 3";
+        write "divide -> 4"; 
+
+        write "Enter the operator code";
+        read opr;
+
+        see opr==0 {
+            return 0;
+        }
+        write "Enter the 1st operand";
+        read op1;
+        write "Enter the 2nd operand";
+        read op2; 
+
+        
+        write "the result is: ";
+        see opr==1 {
+            write op1+op2;
+        }or {
+            see opr == 2 {
+                write op1-op2;
+            }or{
+                see opr == 3 {
+                    write op1*op2;
+                }or{
+                    see opr==4 {
+                        write op1/op2;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+

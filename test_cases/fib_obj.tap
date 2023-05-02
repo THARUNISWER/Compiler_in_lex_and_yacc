@@ -1,0 +1,39 @@
+class fibanocci {
+    i;
+    def fib (n) {
+        a=0; b=1;
+        see n==1 {
+            ans=a;
+        } 
+        or{
+            see n==2 {
+                ans=b;
+            }
+            or{
+                go i=2:i<n:i++{
+                    c = a+b;
+                    a=b;
+                    b=c;
+                }
+                ans = b;
+            }
+        }
+        i=n;
+        return ans ;
+    }
+}
+main { 
+    f1 = new fibanocci(1);
+    
+    |=> tap1 = new tap;
+
+    |=> fibanocci.f2.i=2;
+
+    |=> write fibanocci.f1.j;
+    |=> write fibanocci.f1.fi(10);
+
+    write fibanocci.f1.i;
+    write fibanocci.f1.fib(10);
+    write fibanocci.f1.i;
+    return 0;
+}

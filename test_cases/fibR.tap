@@ -1,0 +1,20 @@
+def fib (n) {
+    ans = 1;
+    see n==1 {
+        return 1;
+    }or{
+        see n==2 {
+            return 1;
+        }or{
+            ans = fib (n-1) + fib (n-2);
+        }
+    }  
+    return ans ;
+}
+main { 
+    go i=1:i<11:i++ {
+        write fib(i);
+    } 
+    return 0;
+}
+
